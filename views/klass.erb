@@ -1,0 +1,14 @@
+
+	<ul>
+	<% for student in @students %>
+		<li>
+			<a href="/klass/<%= @klass.name %>/student/<%= student.id %>" >
+			<%= student.last_name %>, <%= student.first_name %> 
+			</a>
+		</li>
+
+		
+	<% end %>
+
+
+	</ul>

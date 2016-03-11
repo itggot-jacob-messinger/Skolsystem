@@ -1,0 +1,7 @@
+<form action="/remove/klass" method="post">	
+	<% for klass in @klasser %>
+		<label><%= klass.name %></label>	
+		<input type="checkbox" name="remove_klass[]" value="<%= klass.id %>">
+	<% end %>
+	<input type="submit" value="Remove Klass"> 
+</form>

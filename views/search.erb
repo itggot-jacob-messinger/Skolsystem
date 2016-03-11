@@ -1,0 +1,25 @@
+<% if @students.length > 0 || @klasser.length > 0 %>
+	<ul>
+		<% if @klasser.length > 0 %>
+			<% for klass in @klasser %>
+				<li>
+					<a href="/klass/<%= klass.name %>">
+						<%= klass.name %>
+					</a>
+				</li>
+			<% end %>
+		<% end %>
+
+		<% if @students.length > 0 %>
+			<% for student in @students %>
+				<li>
+					<a href="/klass/<%= student.klass.name %>/student/<%= student.id %>">
+						<%= student.last_name %>, <%= student.first_name %>
+					</a>
+				</li>	
+			<% end %>
+		<% end %>
+	</ul>
+<% else %>
+	<h2>Inga resultat</h2>
+<% end %>
